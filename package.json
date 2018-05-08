@@ -1,0 +1,42 @@
+{
+  "name": "parcel-plugin-text",
+  "version": "1.0.0",
+  "description": "text file loader asset type",
+  "main": "src/index.js",
+  "author": "janouma",
+  "license": "ISC",
+  "scripts": {
+    "lint": "eslint \"**/*.js\""
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "pre-push": [
+    "test"
+  ],
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "env": {
+      "node": true
+    }
+  },
+  "engines": {
+    "node": "^9.5.0",
+    "npm": "^5.8.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^12.0.0-alpha.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "parcel-bundler": "^1.8.1",
+    "pre-commit": "^1.2.2",
+    "pre-push": "^0.1.1",
+    "standard": "^11.0.1"
+  }
+}
