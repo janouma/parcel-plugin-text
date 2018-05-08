@@ -10,7 +10,7 @@ module.exports = class TextAsset extends Asset {
   }
 
   generate () {
-    const content = this.contents.replace(/'/g, "\\'")
+    const content = this.contents.replace(/`/g, '\\`')
 
     log.debug({ loaded: this.name })
     log.trace({content})
