@@ -11,7 +11,7 @@ module.exports = class TextAsset extends Asset {
 
   generate () {
     const content = this.contents.replace(/`/g, '\\`')
-      .replace(/\$/g, '\\$')
+      .replace(/\$(?=\{.*?\})/g, '\\$')
 
     log.debug({ loaded: this.name })
     log.trace({content})
