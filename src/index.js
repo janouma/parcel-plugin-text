@@ -4,7 +4,7 @@ const packageName = require('../package.json').name
 const cosmiconfig = require('cosmiconfig')
 const log = require('loglevel')
 
-module.exports = async function init (bundler) {
+module.exports = async function(bundler) {
   const explorer = cosmiconfig(packageName)
   let config
 
@@ -20,4 +20,4 @@ module.exports = async function init (bundler) {
   for (const ext of extentions) {
     bundler.addAssetType(ext, require.resolve('./asset'))
   }
-}
+};
