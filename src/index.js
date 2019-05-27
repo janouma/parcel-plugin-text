@@ -17,9 +17,9 @@ module.exports = async function init (bundler) {
     log.trace(e)
   }
 
-  const extentions = (config && config.extentions) || ['txt']
+  const extensions = (config && (config.extensions || config.extentions)) || ['txt']
 
-  for (const ext of extentions) {
+  for (const ext of extensions) {
     bundler.addAssetType(ext, require.resolve('./asset'))
   }
 }

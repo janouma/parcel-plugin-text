@@ -9,7 +9,7 @@ If you need to handle others extensions than the default one —*`.txt`*, put a 
 
 ```json
 {
-  "extentions":[
+  "extensions":[
     "vueml",
     "svgsprt",
     "text"
