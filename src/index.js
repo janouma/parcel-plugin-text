@@ -4,6 +4,8 @@ const packageName = require('../package.json').name
 const cosmiconfig = require('cosmiconfig')
 const log = require('loglevel')
 
+log.setLevel(process.env.LOG_LEVEL || 'info')
+
 module.exports = async function init (bundler) {
   const explorer = cosmiconfig(packageName)
   let config

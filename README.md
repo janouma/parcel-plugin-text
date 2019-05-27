@@ -16,3 +16,10 @@ If you need to handle others extensions than the default one —*`.txt`*, put a 
   ]
 }
 ```
+
+# Debug
+
+By setting `LOG_LEVEL` environment variable to `trace` you can see config loading errors, like so for example:
+```sh
+LOG_LEVEL=trace npm run build
+```
