@@ -1,6 +1,6 @@
 {
   "name": "parcel-plugin-text",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "description": "text file loader asset type",
   "main": "src/index.js",
   "author": "janouma",
