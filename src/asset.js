@@ -10,15 +10,13 @@ module.exports = class TextAsset extends Asset {
   }
 
   generate () {
-    const content = this.contents.replace(/`/g, '\\`')
-      .replace(/\$(?=\{.*?\})/g, '\\$')
-
+    const content = JSON.stringify(this.contents);
     log.debug({ loaded: this.name })
-    log.trace({content})
+    log.trace({ content })
 
     return [{
       type: 'js',
-      value: `module.exports = \`${content}\``
+      value: `module.exports = ${content}`,
     }]
   }
 }
